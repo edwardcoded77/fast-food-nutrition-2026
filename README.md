@@ -13,7 +13,7 @@ Families, students and busy workers often choose fast food without knowing how m
 ### Data
 Dataset: `Fast Food Nutrition`
 
-|d 	Name 	Type 	Vendor	Calories Fat (g)	Protein (g)	Carbohydrate (g)	Cholesterol (mg)	Saturated Fats (g)	Sodium (mg)	Serving Weight 1 (g)	200 Calorie Weight (g) 
+id Name 	Type 	Vendor	Calories Fat (g)	Protein (g)	Carbohydrate (g)	Cholesterol (mg)	Saturated Fats (g)	Sodium (mg)	Serving Weight 1 (g)	200 Calorie Weight (g) 
 |---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 1	Kfc Biscuit	Biscuit	KFC	358.0	17.05	7.5	43.55	1.0	11.916	1070.0	49.0	55.866
 2	McDonalds Bacon Egg & Cheese Biscuit	Biscuit	McDonalds	304.0	18.77	13.45	22.26	167.0	8.262	863.0	142.0	65.789
