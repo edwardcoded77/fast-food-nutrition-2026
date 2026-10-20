@@ -7,7 +7,7 @@ Families, students and busy workers often choose fast food without knowing how m
 
 
 ## The Plan:
-  ![alt text](image.png)
+![My Smart Food Choice app mockup](image.png)
 
 
 ## Links
