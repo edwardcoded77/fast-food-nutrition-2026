@@ -1,16 +1,11 @@
-# React + Vite
+# Smart Food Choice
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## The Problem
 
-Currently, two official plugins are available:
+Families, students and busy workers often choose fast food without knowing how much calories, protein, fat, carbohydrates, or sodium their meals contain. They need a simple way to check and compare nutritional information before ordering.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+## Links
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- Live : https://smartfoodchoice.netlify.app/
+- Repo : https://github.com/edwardcoded77/hackathon
