@@ -6,7 +6,8 @@ Families, students and busy workers often choose fast food without knowing how m
 
 ## The Plan:
 
-<img width="684" height="734" alt="The plan" src="https://github.com/user-attachments/assets/1b203015-4ddf-4183-990b-5edd0316e49e" />
+<img width="729" height="691" alt="The plan" src="https://github.com/user-attachments/assets/043bbe37-bcbe-41d0-8ba6-8cf2155dadfa" />
+
 
 
 ## Data:
