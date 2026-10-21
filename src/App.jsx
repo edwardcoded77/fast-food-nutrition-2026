@@ -1,11 +1,19 @@
 import { useState } from 'react'
 import './App.css'
 import "@picocss/pico/css/pico.css"
+import useFetchData from './useFetchData.js'
+import RecordCard from './RecordCard.jsx'
+
 
 
 
 
 function App() {
+  const { records, loading, error } = useFetchData("https://studentedward-data-api.edwardolagunju25.workers.dev/api/v1/datasets/fast-food-nutrition/records")
+        if (loading){
+    return <h1>Loading...</h1>
+    }
+
 
   return (
     <div  className="card">
@@ -15,9 +23,15 @@ function App() {
         <h2>Your journey to better eating starts here.</h2>
         <p>Compare your favorite foods. Understand what's in them.Choose what works for you.</p>
       </header>
-    </div>
+      <p>{error}</p>
+      <RecordCard record={records[0]} />
+      <RecordCard record={records[1]} />
+      <RecordCard record={records[2]} />
+      <RecordCard record={records[3]} />
+      <RecordCard record={records[4]} />
+      <RecordCard record={records[5]} />
+    </div> 
   )
-
 }
 
 export default App
