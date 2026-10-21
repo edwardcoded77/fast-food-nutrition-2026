@@ -24,12 +24,8 @@ function App() {
         <p>Compare your favorite foods. Understand what's in them.Choose what works for you.</p>
       </header>
       <p>{error}</p>
-      <RecordCard record={records[0]} />
-      <RecordCard record={records[1]} />
-      <RecordCard record={records[2]} />
-      <RecordCard record={records[3]} />
-      <RecordCard record={records[4]} />
-      <RecordCard record={records[5]} />
+          {records.map((record) => <RecordCard key={record.id} record={record} />)}
+
     </div> 
   )
 }
