@@ -1,0 +1,36 @@
+
+body {
+ margin: 0;
+  background-color: #000000;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+
+
+
+.card {
+  width: 100%;
+  margin: 0;
+  padding: 12px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.heading {
+  padding: 16px;
+  background-color: #23543d;
+  border-radius: 16px;
+}
+
+
+.heading h1 {
+  font-size: 30px;
+}
+
+
+.heading h2 {
+  font-size: 20px;
+  margin-top: 12px;
+}
