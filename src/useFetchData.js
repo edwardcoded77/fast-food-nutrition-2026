@@ -1,25 +1,46 @@
+
 import { useState, useEffect } from 'react'
 
-function useFetchData(url) {
+    function useFetchData(url) {
     const [records, setRecords] = useState([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState("")
 
     useEffect(() => {
-    const load = async () => {
+        const load = async () => {
         try {
-        const response = await fetch(url)
-        const json = await response.json()
-        if (response.ok) {
-            setRecords(json.records)
-        } else {
-            setError(json.error.message)
-        }
+            setLoading(true)
+            setError("")
+
+            let allRecords = []
+            let offset = 0
+            let total = 0
+
+            do {
+            const pageUrl = new URL(url)
+            pageUrl.searchParams.set("limit", "100")
+            pageUrl.searchParams.set("offset", String(offset))
+
+            const response = await fetch(pageUrl)
+            const json = await response.json()
+
+            if (!response.ok) {
+                throw new Error(json.error?.message || "Failed to load records")
+            }
+
+            allRecords = [...allRecords, ...json.records]
+            total = json.total
+            offset += json.count
+            } while (offset < total)
+
+            setRecords(allRecords)
         } catch (problem) {
-        setError("Could not load " + url + " (" + problem.message + ")")
+            setError("Could not load food records: " + problem.message)
+        } finally {
+            setLoading(false)
         }
-        setLoading(false)
-    }
+        }
+
     load()
     }, [url])
 
