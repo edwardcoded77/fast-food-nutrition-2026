@@ -1,6 +1,6 @@
 # Smart Food Choice
 
-## The Problem
+## The Problem:
 
 Families, students and busy workers often choose fast food without knowing how much calories, protein, fat, carbohydrates, or sodium their meals contain. They need a simple way to check and compare nutritional information before ordering.
 
@@ -32,6 +32,11 @@ Dataset: `Fast Food Nutrition`
 
 ## Team
 Accountability partner:@helloimshanae
+
+
+
+## The Plan:
+![My Smart Food Choice app mockup](image.png)
 
 
 ## Links
