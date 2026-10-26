@@ -42,4 +42,4 @@ Accountability partner:@helloimshanae
 ## Links
 
 - Live : https://smartfoodchoice.netlify.app/
-- Repo : https://github.com/edwardcoded77/hackathon
+- Repo : https://github.com/edwardcoded77/fast-food-nutrition-2026
