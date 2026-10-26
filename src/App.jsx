@@ -47,7 +47,7 @@ function App() {
         <header className="heading">
             <div className="hero-text">
           <p className="eyebrow">YOUR FOOD, YOUR CHOICE</p>
-          <h1>Eat better. Choose smarter.</h1>
+          <h1 >Eat better. Choose smarter.</h1>
           <p className="hero-description">
             Discover what's in your favorite meals and
             compare nutrition before you order.

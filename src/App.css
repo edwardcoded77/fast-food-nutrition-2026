@@ -1,14 +1,21 @@
 
-/* Main page container */
+/* Main page */
 .card {
   max-width: 1200px;
   margin: 30px auto;
   padding: 24px;
-  background-color: #000;
+  /* background-color: #575454; */
+  background-color: #858282;
   border-radius: 20px;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
 }
+
+.card h1 {
+    color:#504b4b;
+}
+
+
 
 /* Hero section: text on the left, food image on the right */
 .heading {
@@ -19,19 +26,25 @@
   margin-bottom: 28px;
   padding: 32px;
   background: linear-gradient(135deg, #075e43, #0b7855);
+  background:#e6e2e0;
   border-radius: 20px;
 }
+
+
+
 
 .hero-text {
   flex: 1;
   min-width: 0;
+
 }
 
 .eyebrow {
   margin-bottom: 16px;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: bold;
   letter-spacing: 2px;
+  color:#000;
 }
 
 .heading h1 {
@@ -45,6 +58,7 @@
   margin: 0;
   font-size: 18px;
   line-height: 1.7;
+  color:#000;
 }
 
 .hero-image {
