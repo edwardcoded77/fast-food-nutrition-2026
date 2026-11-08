@@ -12,7 +12,10 @@ function App() {
 
   const [query, setQuery] = useState("")
   const [searchText, setSearchText] = useState("")
-  const [selectedVendor, setSelectedVendor] = useState("")
+  const [selectedVendor, setSelectedVendor] = useState("All foods")
+  const  [compareItems, setCompareItems] = useState([]) 
+
+
 
   // converting text to consistent format
     const normalize = (value) =>
@@ -36,10 +39,17 @@ function App() {
       return matchesSearch && matchesVendor
     })
 
-  if (loading) {
-    return <h1>Loading...</h1>
-  }
+      const compare = (item) => {
+      setCompareItems([...compareItems, item])
+      console.log(item)
+      }
 
+      const resetSearch = () => {
+        setQuery("")
+        setSearchText("")
+        setSelectedVendor("All foods")
+        setCompareItems([])
+      }
 
 
   return (
@@ -62,6 +72,7 @@ function App() {
         <h2>Find your food</h2>
         <p>Search meals and compare your favorite restaurants.</p>
       </section>
+      
       <form
           className="search-form"
           onSubmit={(event) => {
@@ -78,28 +89,47 @@ function App() {
           />
             <button type="submit" className="Search-Btn">Search</button>
       </form>
+
           <div className="restaurant-filter">
-          <label htmlFor="restaurant">Filter by restaurant</label>
-        <select
-            id="restaurant"
-            value={selectedVendor}
-            onChange={(event) => setSelectedVendor(event.target.value)}
-              >
-            <option value="">Select restaurant</option>
-            {vendors.map((vendor) => (<option key={vendor} value={vendor}>{vendor}
-              </option>
-            ))}
-          </select>
+            <label htmlFor="restaurant">Filter by restaurant</label>
+              <select
+                id="restaurant"
+                value={selectedVendor}
+                onChange={(event) => setSelectedVendor(event.target.value)}
+                  >
+                <option value="">Select restaurant</option>
+                {vendors.map((vendor) => (<option key={vendor} value={vendor}>{vendor}
+                  </option>
+                ))}
+                </select>
         </div>
+            
+            <div className="compare">
+            <h2>Compare your food </h2>
+            <p>Selected foods: {compareItems.length}</p>
+                
+            <div className="compare-items"> 
+              {compareItems.map((item) => (
+                  <div className="compare-item"  key={item.id}>
+                      <h3>{item.Name}</h3>
+                      <p>{item.Vendor}</p>
+                      <p>Calories: {item.Calories}</p>
+                  </div>
+                ))}
+                </div>
+              </div>
+
+              <button type="button" className="resetBtn"onClick={resetSearch}>Reset Search</button>
+        
         <div className="food-grid">
-  {shown.length > 0 ? (
-    shown.map((record) => (
-      <RecordCard key={record.id} record={record} />
-    ))
-  ) : query !== "" || selectedVendor !== "" ? (
-    <p>No matching foods found. Try another search or filter.</p>
-  ) : null}
-</div>
+            {shown.length > 0 ? (
+              shown.map((record) => (
+                <RecordCard key={record.id} record={record} onCompare={compare}/>
+              ))
+            ) : query !== "" || searchText !== "" || selectedVendor !== "All foods" ? (
+              <p>No matching foods found. Try another search or filter.</p>
+            ) : null}
+        </div>
 
     </div>
   )
