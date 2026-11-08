@@ -488,16 +488,19 @@
 }
 
 .resetBtn {
+  flex: 0 0 auto;
   width: auto;
-  padding: 14px 24px;
   margin: 0;
-  background-color: #fff;
-  color: #075e43;
+  padding: 14px 28px;
   border: 1px solid #087f5b;
-  border-radius: 12px;
+  border-radius: 30px;
+  background: #087f5b !important;
+  color: #fff !important;
   cursor: pointer;
+  
 }
 
 .resetBtn:hover {
-  background-color: #e0f2e9;
+    background: #065f46 !important;
 }
+
