@@ -112,8 +112,8 @@ function App() {
               {compareItems.map((item) => (
                   <div className="compare-item"  key={item.id}>
                       <h3>{item.Name}</h3>
-                      <p>{item.Vendor}</p>
-                      <p>Calories: {item.Calories}</p>
+                      <p><b>{item.Vendor}</b></p>
+                      <p><b>Calories: {item.Calories}</b></p>
                   </div>
                 ))}
                 </div>
